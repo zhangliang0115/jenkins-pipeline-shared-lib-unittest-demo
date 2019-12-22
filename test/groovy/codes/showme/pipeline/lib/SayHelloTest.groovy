@@ -1,10 +1,20 @@
 package codes.showme.pipeline.lib
 
+import com.lesfurets.jenkins.unit.BasePipelineTest
+import org.junit.Before
 import org.junit.Test
 
 import static org.assertj.core.api.Assertions.assertThat
 
-class SayHelloTest extends BaseSharedLib {
+class SayHelloTest extends  BasePipelineTest {
+
+    @Override
+    @Before
+    public void setUp() throws Exception {
+        scriptRoots = ["vars"]
+        super.setUp()
+
+    }
 
     @Test
     void call() {

@@ -1,11 +1,22 @@
 package codes.showme.pipeline.lib
 
-import org.junit.Assert
+import com.lesfurets.jenkins.unit.BasePipelineTest
+import org.junit.Before
 import org.junit.Test
 
 import static org.junit.Assert.assertEquals
 
-class SetEnvStepTest extends BaseSharedLib {
+class SetEnvStepTest extends BasePipelineTest {
+
+    @Override
+    @Before
+    public void setUp() throws Exception {
+        scriptRoots = ["vars"]
+        super.setUp()
+
+    }
+
+
     @Test
     void call() {
         binding.setVariable('env', new HashMap())
