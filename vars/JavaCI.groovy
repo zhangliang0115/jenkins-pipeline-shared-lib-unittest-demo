@@ -5,7 +5,10 @@ def call(Closure body){
             stage('Hello') {
                 steps {
                     echo 'Hello World'
-                    body()
+                    script {
+                        body()
+                    }
+
                 }
             }
         }
