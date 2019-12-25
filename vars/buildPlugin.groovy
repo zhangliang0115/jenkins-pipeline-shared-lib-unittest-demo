@@ -1,5 +1,5 @@
 def call(Map config) {
     node {
-        mail to: '...', subject: "${config.name} plugin build", body: '...'
+        mail to: 'zhangliang0115@126.com', subject: "${config.name} plugin build", body: '...'
     }
 }
